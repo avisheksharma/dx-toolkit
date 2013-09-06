@@ -717,9 +717,9 @@ def print_ls_l_desc(desc, **kwargs):
 
 def get_find_jobs_string(jobdesc, has_children, single_result=False, show_outputs=True):
     '''
-    :param jobdesc: hash of job describe output
-    :param has_children: whether the job has subjobs to be printed
-    :param single_result: whether the job is displayed as a single result or as part of a job tree
+    :param desc: hash of the job or analysis describe output
+    :param has_children: whether the execution has children (stages or subjobs) to be printed
+    :param single_result: whether the execution is displayed as a single result or as part of an execution tree
     '''
     is_origin_job = jobdesc['parentJob'] is None or single_result
     result = ("* " if is_origin_job and get_delimiter() is None else "")

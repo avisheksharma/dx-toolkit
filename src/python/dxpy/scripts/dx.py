@@ -2190,6 +2190,7 @@ def find_executions(args):
                 break
 
             if args.trees:
+                print job_result
                 process_tree(*job_result)
             elif args.json:
                 json_output.append(job_result['describe'])

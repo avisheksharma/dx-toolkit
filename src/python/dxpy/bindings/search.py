@@ -208,6 +208,8 @@ def find_executions(classname=None, launched_by=None, executable=None, project=N
                     name=None, name_mode="exact", limit=None, return_handler=False, format=None, list_subjobs=True,
                     **kwargs):
     '''
+    :param classname: If provided, either "job" or "analysis" to restrict results by class; otherwise both jobs and analyses are returned
+    :type classname: string
     :param launched_by: User ID of the user who launched the execution's origin execution
     :type launched_by: string
     :param executable: ID of the applet or app that spawned this execution, or a corresponding remote object handler
