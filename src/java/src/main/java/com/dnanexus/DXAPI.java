@@ -48,7 +48,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode analysisDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode analysisDescribe(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
     }
 
@@ -81,7 +81,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode analysisTerminate(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode analysisTerminate(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "terminate", inputParams);
     }
 
@@ -114,7 +114,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appAddAuthorizedUsers(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appAddAuthorizedUsers(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "addAuthorizedUsers", inputParams);
     }
 
@@ -147,7 +147,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appAddCategories(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appAddCategories(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "addCategories", inputParams);
     }
 
@@ -180,7 +180,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appAddDevelopers(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appAddDevelopers(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "addDevelopers", inputParams);
     }
 
@@ -213,7 +213,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appAddTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appAddTags(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTags", inputParams);
     }
 
@@ -246,7 +246,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appDelete(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appDelete(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "delete", inputParams);
     }
 
@@ -279,7 +279,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appDescribe(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
     }
 
@@ -312,7 +312,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appGet(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appGet(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "get", inputParams);
     }
 
@@ -345,7 +345,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appInstall(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appInstall(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "install", inputParams);
     }
 
@@ -378,7 +378,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appListAuthorizedUsers(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appListAuthorizedUsers(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "listAuthorizedUsers", inputParams);
     }
 
@@ -411,7 +411,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appListCategories(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appListCategories(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "listCategories", inputParams);
     }
 
@@ -444,7 +444,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appListDevelopers(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appListDevelopers(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "listDevelopers", inputParams);
     }
 
@@ -477,7 +477,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appPublish(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appPublish(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "publish", inputParams);
     }
 
@@ -510,7 +510,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appRemoveAuthorizedUsers(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appRemoveAuthorizedUsers(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeAuthorizedUsers", inputParams);
     }
 
@@ -543,7 +543,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appRemoveCategories(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appRemoveCategories(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeCategories", inputParams);
     }
 
@@ -576,7 +576,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appRemoveDevelopers(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appRemoveDevelopers(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeDevelopers", inputParams);
     }
 
@@ -609,7 +609,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appRemoveTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appRemoveTags(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTags", inputParams);
     }
 
@@ -642,7 +642,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appRun(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appRun(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "run", inputParams);
     }
 
@@ -675,7 +675,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appUninstall(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appUninstall(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "uninstall", inputParams);
     }
 
@@ -708,7 +708,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appUpdate(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appUpdate(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "update", inputParams);
     }
 
@@ -737,7 +737,7 @@ public class DXAPI {
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appNew(DXEnvironment env, JsonNode inputParams) throws Exception {
+    public static JsonNode appNew(JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/app/new", inputParams);
     }
 
@@ -770,7 +770,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appletAddTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appletAddTags(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTags", inputParams);
     }
 
@@ -803,7 +803,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appletDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appletDescribe(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
     }
 
@@ -836,7 +836,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appletGet(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appletGet(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "get", inputParams);
     }
 
@@ -869,7 +869,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appletGetDetails(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appletGetDetails(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "getDetails", inputParams);
     }
 
@@ -902,7 +902,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appletListProjects(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appletListProjects(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "listProjects", inputParams);
     }
 
@@ -935,7 +935,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appletRemoveTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appletRemoveTags(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTags", inputParams);
     }
 
@@ -968,7 +968,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appletRename(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appletRename(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "rename", inputParams);
     }
 
@@ -1001,7 +1001,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appletRun(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appletRun(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "run", inputParams);
     }
 
@@ -1034,7 +1034,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appletSetProperties(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode appletSetProperties(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "setProperties", inputParams);
     }
 
@@ -1063,7 +1063,7 @@ public class DXAPI {
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode appletNew(DXEnvironment env, JsonNode inputParams) throws Exception {
+    public static JsonNode appletNew(JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/applet/new", inputParams);
     }
 
@@ -1096,7 +1096,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode containerClone(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode containerClone(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "clone", inputParams);
     }
 
@@ -1129,7 +1129,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode containerDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode containerDescribe(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
     }
 
@@ -1156,7 +1156,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode containerDestroy(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode containerDestroy(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "destroy", inputParams);
     }
 
@@ -1189,7 +1189,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode containerListFolder(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode containerListFolder(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "listFolder", inputParams);
     }
 
@@ -1222,7 +1222,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode containerMove(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode containerMove(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "move", inputParams);
     }
 
@@ -1255,7 +1255,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode containerNewFolder(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode containerNewFolder(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "newFolder", inputParams);
     }
 
@@ -1288,7 +1288,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode containerRemoveFolder(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode containerRemoveFolder(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeFolder", inputParams);
     }
 
@@ -1321,7 +1321,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode containerRemoveObjects(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode containerRemoveObjects(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeObjects", inputParams);
     }
 
@@ -1354,7 +1354,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode containerRenameFolder(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode containerRenameFolder(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "renameFolder", inputParams);
     }
 
@@ -1387,7 +1387,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode fileAddTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode fileAddTags(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTags", inputParams);
     }
 
@@ -1420,7 +1420,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode fileAddTypes(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode fileAddTypes(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTypes", inputParams);
     }
 
@@ -1453,7 +1453,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode fileClose(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode fileClose(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "close", inputParams);
     }
 
@@ -1486,7 +1486,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode fileDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode fileDescribe(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
     }
 
@@ -1519,7 +1519,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode fileDownload(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode fileDownload(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "download", inputParams);
     }
 
@@ -1552,7 +1552,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode fileGetDetails(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode fileGetDetails(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "getDetails", inputParams);
     }
 
@@ -1585,7 +1585,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode fileListProjects(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode fileListProjects(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "listProjects", inputParams);
     }
 
@@ -1618,7 +1618,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode fileRemoveTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode fileRemoveTags(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTags", inputParams);
     }
 
@@ -1651,7 +1651,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode fileRemoveTypes(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode fileRemoveTypes(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTypes", inputParams);
     }
 
@@ -1684,7 +1684,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode fileRename(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode fileRename(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "rename", inputParams);
     }
 
@@ -1717,7 +1717,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode fileSetDetails(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode fileSetDetails(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "setDetails", inputParams);
     }
 
@@ -1750,7 +1750,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode fileSetProperties(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode fileSetProperties(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "setProperties", inputParams);
     }
 
@@ -1783,7 +1783,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode fileSetVisibility(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode fileSetVisibility(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "setVisibility", inputParams);
     }
 
@@ -1816,7 +1816,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode fileUpload(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode fileUpload(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "upload", inputParams);
     }
 
@@ -1845,7 +1845,7 @@ public class DXAPI {
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode fileNew(DXEnvironment env, JsonNode inputParams) throws Exception {
+    public static JsonNode fileNew(JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/file/new", inputParams);
     }
 
@@ -1878,7 +1878,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode gtableAddRows(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode gtableAddRows(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "addRows", inputParams);
     }
 
@@ -1911,7 +1911,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode gtableAddTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode gtableAddTags(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTags", inputParams);
     }
 
@@ -1944,7 +1944,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode gtableAddTypes(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode gtableAddTypes(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTypes", inputParams);
     }
 
@@ -1977,7 +1977,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode gtableClose(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode gtableClose(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "close", inputParams);
     }
 
@@ -2010,7 +2010,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode gtableDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode gtableDescribe(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
     }
 
@@ -2043,7 +2043,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode gtableGet(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode gtableGet(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "get", inputParams);
     }
 
@@ -2076,7 +2076,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode gtableGetDetails(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode gtableGetDetails(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "getDetails", inputParams);
     }
 
@@ -2109,7 +2109,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode gtableListProjects(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode gtableListProjects(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "listProjects", inputParams);
     }
 
@@ -2142,7 +2142,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode gtableNextPart(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode gtableNextPart(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "nextPart", inputParams);
     }
 
@@ -2175,7 +2175,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode gtableRemoveTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode gtableRemoveTags(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTags", inputParams);
     }
 
@@ -2208,7 +2208,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode gtableRemoveTypes(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode gtableRemoveTypes(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTypes", inputParams);
     }
 
@@ -2241,7 +2241,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode gtableRename(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode gtableRename(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "rename", inputParams);
     }
 
@@ -2274,7 +2274,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode gtableSetDetails(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode gtableSetDetails(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "setDetails", inputParams);
     }
 
@@ -2307,7 +2307,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode gtableSetProperties(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode gtableSetProperties(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "setProperties", inputParams);
     }
 
@@ -2340,7 +2340,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode gtableSetVisibility(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode gtableSetVisibility(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "setVisibility", inputParams);
     }
 
@@ -2369,7 +2369,7 @@ public class DXAPI {
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode gtableNew(DXEnvironment env, JsonNode inputParams) throws Exception {
+    public static JsonNode gtableNew(JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/gtable/new", inputParams);
     }
 
@@ -2402,7 +2402,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode jobDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode jobDescribe(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
     }
 
@@ -2435,7 +2435,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode jobStreamLog(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode jobStreamLog(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "streamLog", inputParams);
     }
 
@@ -2468,7 +2468,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode jobTerminate(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode jobTerminate(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "terminate", inputParams);
     }
 
@@ -2497,7 +2497,7 @@ public class DXAPI {
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode jobNew(DXEnvironment env, JsonNode inputParams) throws Exception {
+    public static JsonNode jobNew(JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/job/new", inputParams);
     }
 
@@ -2520,7 +2520,7 @@ public class DXAPI {
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode notificationsGet(DXEnvironment env, JsonNode inputParams) throws Exception {
+    public static JsonNode notificationsGet(JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/notifications/get", inputParams);
     }
 
@@ -2543,7 +2543,7 @@ public class DXAPI {
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode notificationsMarkRead(DXEnvironment env, JsonNode inputParams) throws Exception {
+    public static JsonNode notificationsMarkRead(JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/notifications/markRead", inputParams);
     }
 
@@ -2576,7 +2576,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode projectAddTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode projectAddTags(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTags", inputParams);
     }
 
@@ -2609,7 +2609,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode projectClone(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode projectClone(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "clone", inputParams);
     }
 
@@ -2642,7 +2642,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode projectDecreasePermissions(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode projectDecreasePermissions(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "decreasePermissions", inputParams);
     }
 
@@ -2675,7 +2675,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode projectDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode projectDescribe(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
     }
 
@@ -2708,7 +2708,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode projectDestroy(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode projectDestroy(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "destroy", inputParams);
     }
 
@@ -2741,7 +2741,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode projectInvite(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode projectInvite(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "invite", inputParams);
     }
 
@@ -2774,7 +2774,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode projectLeave(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode projectLeave(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "leave", inputParams);
     }
 
@@ -2807,7 +2807,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode projectListFolder(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode projectListFolder(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "listFolder", inputParams);
     }
 
@@ -2840,7 +2840,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode projectMove(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode projectMove(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "move", inputParams);
     }
 
@@ -2873,7 +2873,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode projectNewFolder(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode projectNewFolder(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "newFolder", inputParams);
     }
 
@@ -2906,7 +2906,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode projectRemoveFolder(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode projectRemoveFolder(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeFolder", inputParams);
     }
 
@@ -2939,7 +2939,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode projectRemoveObjects(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode projectRemoveObjects(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeObjects", inputParams);
     }
 
@@ -2972,7 +2972,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode projectRemoveTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode projectRemoveTags(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTags", inputParams);
     }
 
@@ -3005,7 +3005,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode projectRenameFolder(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode projectRenameFolder(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "renameFolder", inputParams);
     }
 
@@ -3038,7 +3038,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode projectSetProperties(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode projectSetProperties(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "setProperties", inputParams);
     }
 
@@ -3071,7 +3071,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode projectUpdate(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode projectUpdate(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "update", inputParams);
     }
 
@@ -3100,7 +3100,7 @@ public class DXAPI {
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode projectNew(DXEnvironment env, JsonNode inputParams) throws Exception {
+    public static JsonNode projectNew(JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/project/new", inputParams);
     }
 
@@ -3133,7 +3133,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode recordAddTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode recordAddTags(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTags", inputParams);
     }
 
@@ -3166,7 +3166,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode recordAddTypes(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode recordAddTypes(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTypes", inputParams);
     }
 
@@ -3199,7 +3199,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode recordClose(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode recordClose(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "close", inputParams);
     }
 
@@ -3232,7 +3232,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode recordDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode recordDescribe(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
     }
 
@@ -3265,7 +3265,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode recordGetDetails(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode recordGetDetails(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "getDetails", inputParams);
     }
 
@@ -3298,7 +3298,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode recordListProjects(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode recordListProjects(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "listProjects", inputParams);
     }
 
@@ -3331,7 +3331,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode recordRemoveTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode recordRemoveTags(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTags", inputParams);
     }
 
@@ -3364,7 +3364,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode recordRemoveTypes(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode recordRemoveTypes(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTypes", inputParams);
     }
 
@@ -3397,7 +3397,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode recordRename(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode recordRename(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "rename", inputParams);
     }
 
@@ -3430,7 +3430,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode recordSetDetails(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode recordSetDetails(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "setDetails", inputParams);
     }
 
@@ -3463,7 +3463,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode recordSetProperties(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode recordSetProperties(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "setProperties", inputParams);
     }
 
@@ -3496,7 +3496,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode recordSetVisibility(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode recordSetVisibility(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "setVisibility", inputParams);
     }
 
@@ -3525,7 +3525,7 @@ public class DXAPI {
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode recordNew(DXEnvironment env, JsonNode inputParams) throws Exception {
+    public static JsonNode recordNew(JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/record/new", inputParams);
     }
 
@@ -3548,7 +3548,7 @@ public class DXAPI {
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode systemFindAffiliates(DXEnvironment env, JsonNode inputParams) throws Exception {
+    public static JsonNode systemFindAffiliates(JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/system/findAffiliates", inputParams);
     }
 
@@ -3577,7 +3577,7 @@ public class DXAPI {
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode systemFindApps(DXEnvironment env, JsonNode inputParams) throws Exception {
+    public static JsonNode systemFindApps(JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/system/findApps", inputParams);
     }
 
@@ -3606,7 +3606,7 @@ public class DXAPI {
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode systemFindDataObjects(DXEnvironment env, JsonNode inputParams) throws Exception {
+    public static JsonNode systemFindDataObjects(JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/system/findDataObjects", inputParams);
     }
 
@@ -3635,7 +3635,7 @@ public class DXAPI {
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode systemFindJobs(DXEnvironment env, JsonNode inputParams) throws Exception {
+    public static JsonNode systemFindJobs(JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/system/findJobs", inputParams);
     }
 
@@ -3664,7 +3664,7 @@ public class DXAPI {
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode systemFindProjects(DXEnvironment env, JsonNode inputParams) throws Exception {
+    public static JsonNode systemFindProjects(JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/system/findProjects", inputParams);
     }
 
@@ -3693,7 +3693,7 @@ public class DXAPI {
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode systemFindUsers(DXEnvironment env, JsonNode inputParams) throws Exception {
+    public static JsonNode systemFindUsers(JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/system/findUsers", inputParams);
     }
 
@@ -3722,7 +3722,7 @@ public class DXAPI {
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode systemFindProjectMembers(DXEnvironment env, JsonNode inputParams) throws Exception {
+    public static JsonNode systemFindProjectMembers(JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/system/findProjectMembers", inputParams);
     }
 
@@ -3745,7 +3745,7 @@ public class DXAPI {
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode systemGreet(DXEnvironment env, JsonNode inputParams) throws Exception {
+    public static JsonNode systemGreet(JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/system/greet", inputParams);
     }
 
@@ -3768,7 +3768,7 @@ public class DXAPI {
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode systemShortenURL(DXEnvironment env, JsonNode inputParams) throws Exception {
+    public static JsonNode systemShortenURL(JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/system/shortenURL", inputParams);
     }
 
@@ -3801,7 +3801,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode userDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode userDescribe(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
     }
 
@@ -3834,7 +3834,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode userUpdate(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode userUpdate(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "update", inputParams);
     }
 
@@ -3867,7 +3867,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode workflowAddStage(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode workflowAddStage(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "addStage", inputParams);
     }
 
@@ -3900,7 +3900,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode workflowAddTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode workflowAddTags(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTags", inputParams);
     }
 
@@ -3933,7 +3933,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode workflowAddTypes(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode workflowAddTypes(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTypes", inputParams);
     }
 
@@ -3966,7 +3966,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode workflowClose(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode workflowClose(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "close", inputParams);
     }
 
@@ -3999,7 +3999,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode workflowDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode workflowDescribe(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
     }
 
@@ -4032,7 +4032,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode workflowGetDetails(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode workflowGetDetails(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "getDetails", inputParams);
     }
 
@@ -4065,7 +4065,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode workflowListProjects(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode workflowListProjects(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "listProjects", inputParams);
     }
 
@@ -4098,7 +4098,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode workflowMoveStage(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode workflowMoveStage(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "moveStage", inputParams);
     }
 
@@ -4131,7 +4131,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode workflowRemoveStage(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode workflowRemoveStage(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeStage", inputParams);
     }
 
@@ -4164,7 +4164,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode workflowRemoveTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode workflowRemoveTags(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTags", inputParams);
     }
 
@@ -4197,7 +4197,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode workflowRemoveTypes(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode workflowRemoveTypes(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTypes", inputParams);
     }
 
@@ -4230,7 +4230,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode workflowRename(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode workflowRename(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "rename", inputParams);
     }
 
@@ -4263,7 +4263,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode workflowRun(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode workflowRun(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "run", inputParams);
     }
 
@@ -4296,7 +4296,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode workflowSetDetails(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode workflowSetDetails(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "setDetails", inputParams);
     }
 
@@ -4329,7 +4329,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode workflowSetProperties(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode workflowSetProperties(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "setProperties", inputParams);
     }
 
@@ -4362,7 +4362,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode workflowSetStageInputs(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode workflowSetStageInputs(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "setStageInputs", inputParams);
     }
 
@@ -4395,7 +4395,7 @@ public class DXAPI {
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode workflowSetVisibility(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+    public static JsonNode workflowSetVisibility(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "setVisibility", inputParams);
     }
 
@@ -4424,7 +4424,7 @@ public class DXAPI {
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode workflowNew(DXEnvironment env, JsonNode inputParams) throws Exception {
+    public static JsonNode workflowNew(JsonNode inputParams, DXEnvironment env) throws Exception {
         return new DXHTTPRequest(env).request("/workflow/new", inputParams);
     }
 }

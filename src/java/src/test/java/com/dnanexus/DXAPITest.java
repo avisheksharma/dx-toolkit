@@ -41,13 +41,13 @@ public class DXAPITest {
         DXEnvironment env = new DXEnvironment.Builder().build();
         DXAPI dx = new DXAPI();
         JsonNode input = (JsonNode)(new MappingJsonFactory().createJsonParser("{}").readValueAsTree());
-        JsonNode responseJson = dx.systemFindDataObjects(env, input);
+        JsonNode responseJson = dx.systemFindDataObjects(input, env);
         org.junit.Assert.assertEquals(responseJson.isObject(), true);
         
         JsonNode bogusSecCtx = (new MappingJsonFactory().createJsonParser("{\"auth_token_type\":\"Bearer\",\"auth_token\":\"BOGUS\"}").readValueAsTree());
         env = new DXEnvironment.Builder().setSecurityContext(bogusSecCtx).build();
         try {
-            dx.systemFindDataObjects(env, input);
+            dx.systemFindDataObjects(input, env);
         } catch (Exception exn) {
             org.junit.Assert.assertTrue(exn.toString().contains("InvalidAuthentication"));
         }

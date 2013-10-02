@@ -62,7 +62,7 @@ class_method_template = '''
      *
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode {method_name}(DXEnvironment env, JsonNode inputParams) throws Exception {{
+    public static JsonNode {method_name}(JsonNode inputParams, DXEnvironment env) throws Exception {{
         return new DXHTTPRequest(env).request("{route}", inputParams);
     }}'''
 
@@ -90,7 +90,7 @@ object_method_template = '''
      * @param objectId ID of the object to operate on
      * @param inputParams input parameters to the API call
      */
-    public static JsonNode {method_name}(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {{
+    public static JsonNode {method_name}(String objectId, JsonNode inputParams, DXEnvironment env) throws Exception {{
         return new DXHTTPRequest(env).request("/" + objectId + "/" + "{method_route}", inputParams);
     }}'''
 
