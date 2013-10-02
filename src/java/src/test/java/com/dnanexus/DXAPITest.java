@@ -18,6 +18,7 @@ import org.junit.*;
 import com.fasterxml.jackson.core.*;
 import com.fasterxml.jackson.databind.*;
 import com.dnanexus.DXAPI;
+import com.dnanexus.DXEnvironment;
 
 public class DXAPITest {
     @BeforeClass public static void setUpClass() throws Exception {
@@ -34,6 +35,22 @@ public class DXAPITest {
         JsonNode responseJson = dx.systemFindDataObjects(input);
         org.junit.Assert.assertEquals(responseJson.isObject(), true);
         // System.out.println(responseJson);
+    }
+
+    @Test public void testDXAPICustomEnvironment() throws Exception {
+        DXEnvironment env = new DXEnvironment.Builder().build();
+        DXAPI dx = new DXAPI();
+        JsonNode input = (JsonNode)(new MappingJsonFactory().createJsonParser("{}").readValueAsTree());
+        JsonNode responseJson = dx.systemFindDataObjects(env, input);
+        org.junit.Assert.assertEquals(responseJson.isObject(), true);
+        
+        JsonNode bogusSecCtx = (new MappingJsonFactory().createJsonParser("{\"auth_token_type\":\"Bearer\",\"auth_token\":\"BOGUS\"}").readValueAsTree());
+        env = new DXEnvironment.Builder().setSecurityContext(bogusSecCtx).build();
+        try {
+            dx.systemFindDataObjects(env, input);
+        } catch (Exception exn) {
+            org.junit.Assert.assertTrue(exn.toString().contains("InvalidAuthentication"));
+        }
     }
 
     @After public void tearDown() throws Exception {

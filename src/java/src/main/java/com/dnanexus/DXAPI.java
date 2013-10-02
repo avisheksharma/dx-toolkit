@@ -7,6 +7,7 @@
 package com.dnanexus;
 
 import com.dnanexus.DXHTTPRequest;
+import com.dnanexus.DXEnvironment;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -39,6 +40,17 @@ public class DXAPI {
     public static JsonNode analysisDescribe(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "describe", inputParams);
     }
+    /**
+     * Invokes the analysisDescribe method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Workflows-and-Analyses#API-method%3A-%2Fanalysis-xxxx%2Fdescribe">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode analysisDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
+    }
 
     /**
      * Invokes the analysisTerminate method.
@@ -60,6 +72,17 @@ public class DXAPI {
      */
     public static JsonNode analysisTerminate(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "terminate", inputParams);
+    }
+    /**
+     * Invokes the analysisTerminate method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Workflows-and-Analyses#API-method%3A-%2Fanalysis-xxxx%2Fterminate">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode analysisTerminate(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "terminate", inputParams);
     }
 
     /**
@@ -83,6 +106,17 @@ public class DXAPI {
     public static JsonNode appAddAuthorizedUsers(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "addAuthorizedUsers", inputParams);
     }
+    /**
+     * Invokes the appAddAuthorizedUsers method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app-xxxx%5B/yyyy%5D/addAuthorizedUsers">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appAddAuthorizedUsers(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "addAuthorizedUsers", inputParams);
+    }
 
     /**
      * Invokes the appAddCategories method.
@@ -104,6 +138,17 @@ public class DXAPI {
      */
     public static JsonNode appAddCategories(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "addCategories", inputParams);
+    }
+    /**
+     * Invokes the appAddCategories method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app-xxxx%5B/yyyy%5D/addCategories">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appAddCategories(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "addCategories", inputParams);
     }
 
     /**
@@ -127,6 +172,17 @@ public class DXAPI {
     public static JsonNode appAddDevelopers(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "addDevelopers", inputParams);
     }
+    /**
+     * Invokes the appAddDevelopers method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app-xxxx%5B/yyyy%5D/addDevelopers">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appAddDevelopers(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "addDevelopers", inputParams);
+    }
 
     /**
      * Invokes the appAddTags method.
@@ -148,6 +204,17 @@ public class DXAPI {
      */
     public static JsonNode appAddTags(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "addTags", inputParams);
+    }
+    /**
+     * Invokes the appAddTags method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app-xxxx%5B/yyyy%5D/addTags">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appAddTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTags", inputParams);
     }
 
     /**
@@ -171,6 +238,17 @@ public class DXAPI {
     public static JsonNode appDelete(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "delete", inputParams);
     }
+    /**
+     * Invokes the appDelete method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app-xxxx%5B/yyyy%5D/delete">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appDelete(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "delete", inputParams);
+    }
 
     /**
      * Invokes the appDescribe method.
@@ -192,6 +270,17 @@ public class DXAPI {
      */
     public static JsonNode appDescribe(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "describe", inputParams);
+    }
+    /**
+     * Invokes the appDescribe method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app-xxxx%5B/yyyy%5D/describe">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
     }
 
     /**
@@ -215,6 +304,17 @@ public class DXAPI {
     public static JsonNode appGet(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "get", inputParams);
     }
+    /**
+     * Invokes the appGet method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app-xxxx%5B/yyyy%5D/get">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appGet(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "get", inputParams);
+    }
 
     /**
      * Invokes the appInstall method.
@@ -236,6 +336,17 @@ public class DXAPI {
      */
     public static JsonNode appInstall(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "install", inputParams);
+    }
+    /**
+     * Invokes the appInstall method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app-xxxx%5B/yyyy%5D/install">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appInstall(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "install", inputParams);
     }
 
     /**
@@ -259,6 +370,17 @@ public class DXAPI {
     public static JsonNode appListAuthorizedUsers(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "listAuthorizedUsers", inputParams);
     }
+    /**
+     * Invokes the appListAuthorizedUsers method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app-xxxx%5B/yyyy%5D/listAuthorizedUsers">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appListAuthorizedUsers(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "listAuthorizedUsers", inputParams);
+    }
 
     /**
      * Invokes the appListCategories method.
@@ -280,6 +402,17 @@ public class DXAPI {
      */
     public static JsonNode appListCategories(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "listCategories", inputParams);
+    }
+    /**
+     * Invokes the appListCategories method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app-xxxx%5B/yyyy%5D/listCategories">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appListCategories(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "listCategories", inputParams);
     }
 
     /**
@@ -303,6 +436,17 @@ public class DXAPI {
     public static JsonNode appListDevelopers(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "listDevelopers", inputParams);
     }
+    /**
+     * Invokes the appListDevelopers method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app-xxxx%5B/yyyy%5D/listDevelopers">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appListDevelopers(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "listDevelopers", inputParams);
+    }
 
     /**
      * Invokes the appPublish method.
@@ -324,6 +468,17 @@ public class DXAPI {
      */
     public static JsonNode appPublish(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "publish", inputParams);
+    }
+    /**
+     * Invokes the appPublish method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app-xxxx%5B/yyyy%5D/publish">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appPublish(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "publish", inputParams);
     }
 
     /**
@@ -347,6 +502,17 @@ public class DXAPI {
     public static JsonNode appRemoveAuthorizedUsers(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "removeAuthorizedUsers", inputParams);
     }
+    /**
+     * Invokes the appRemoveAuthorizedUsers method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app-xxxx%5B/yyyy%5D/removeAuthorizedUsers">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appRemoveAuthorizedUsers(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeAuthorizedUsers", inputParams);
+    }
 
     /**
      * Invokes the appRemoveCategories method.
@@ -368,6 +534,17 @@ public class DXAPI {
      */
     public static JsonNode appRemoveCategories(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "removeCategories", inputParams);
+    }
+    /**
+     * Invokes the appRemoveCategories method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app-xxxx%5B/yyyy%5D/removeCategories">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appRemoveCategories(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeCategories", inputParams);
     }
 
     /**
@@ -391,6 +568,17 @@ public class DXAPI {
     public static JsonNode appRemoveDevelopers(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "removeDevelopers", inputParams);
     }
+    /**
+     * Invokes the appRemoveDevelopers method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app-xxxx%5B/yyyy%5D/removeDevelopers">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appRemoveDevelopers(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeDevelopers", inputParams);
+    }
 
     /**
      * Invokes the appRemoveTags method.
@@ -412,6 +600,17 @@ public class DXAPI {
      */
     public static JsonNode appRemoveTags(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "removeTags", inputParams);
+    }
+    /**
+     * Invokes the appRemoveTags method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app-xxxx%5B/yyyy%5D/removeTags">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appRemoveTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTags", inputParams);
     }
 
     /**
@@ -435,6 +634,17 @@ public class DXAPI {
     public static JsonNode appRun(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "run", inputParams);
     }
+    /**
+     * Invokes the appRun method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app-xxxx%5B/yyyy%5D/run">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appRun(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "run", inputParams);
+    }
 
     /**
      * Invokes the appUninstall method.
@@ -456,6 +666,17 @@ public class DXAPI {
      */
     public static JsonNode appUninstall(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "uninstall", inputParams);
+    }
+    /**
+     * Invokes the appUninstall method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app-xxxx%5B/yyyy%5D/uninstall">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appUninstall(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "uninstall", inputParams);
     }
 
     /**
@@ -479,6 +700,17 @@ public class DXAPI {
     public static JsonNode appUpdate(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "update", inputParams);
     }
+    /**
+     * Invokes the appUpdate method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app-xxxx%5B/yyyy%5D/update">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appUpdate(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "update", inputParams);
+    }
 
     /**
      * Invokes the appNew method.
@@ -497,6 +729,16 @@ public class DXAPI {
      */
     public static JsonNode appNew(JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/app/new", inputParams);
+    }
+    /**
+     * Invokes the appNew method with the specified environment and input parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Apps#API-method:-/app/new">API specification</a>.
+     *
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appNew(DXEnvironment env, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/app/new", inputParams);
     }
 
     /**
@@ -520,6 +762,17 @@ public class DXAPI {
     public static JsonNode appletAddTags(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "addTags", inputParams);
     }
+    /**
+     * Invokes the appletAddTags method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Tags#API-method%3A-%2Fclass-xxxx%2FaddTags">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appletAddTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTags", inputParams);
+    }
 
     /**
      * Invokes the appletDescribe method.
@@ -541,6 +794,17 @@ public class DXAPI {
      */
     public static JsonNode appletDescribe(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "describe", inputParams);
+    }
+    /**
+     * Invokes the appletDescribe method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Applets and Entry Points#API-method%3A-%2Fapplet-xxxx%2Fdescribe">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appletDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
     }
 
     /**
@@ -564,6 +828,17 @@ public class DXAPI {
     public static JsonNode appletGet(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "get", inputParams);
     }
+    /**
+     * Invokes the appletGet method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Applets and Entry Points#API-method%3A-%2Fapplet-xxxx%2Fget">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appletGet(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "get", inputParams);
+    }
 
     /**
      * Invokes the appletGetDetails method.
@@ -585,6 +860,17 @@ public class DXAPI {
      */
     public static JsonNode appletGetDetails(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "getDetails", inputParams);
+    }
+    /**
+     * Invokes the appletGetDetails method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Details-and-Links#API-method%3A-%2Fclass-xxxx%2FgetDetails">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appletGetDetails(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "getDetails", inputParams);
     }
 
     /**
@@ -608,6 +894,17 @@ public class DXAPI {
     public static JsonNode appletListProjects(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "listProjects", inputParams);
     }
+    /**
+     * Invokes the appletListProjects method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Cloning#API-method%3A-%2Fclass-xxxx%2FlistProjects">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appletListProjects(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "listProjects", inputParams);
+    }
 
     /**
      * Invokes the appletRemoveTags method.
@@ -629,6 +926,17 @@ public class DXAPI {
      */
     public static JsonNode appletRemoveTags(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "removeTags", inputParams);
+    }
+    /**
+     * Invokes the appletRemoveTags method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Tags#API-method%3A-%2Fclass-xxxx%2FremoveTags">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appletRemoveTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTags", inputParams);
     }
 
     /**
@@ -652,6 +960,17 @@ public class DXAPI {
     public static JsonNode appletRename(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "rename", inputParams);
     }
+    /**
+     * Invokes the appletRename method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Name#API-method%3A-%2Fclass-xxxx%2Frename">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appletRename(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "rename", inputParams);
+    }
 
     /**
      * Invokes the appletRun method.
@@ -673,6 +992,17 @@ public class DXAPI {
      */
     public static JsonNode appletRun(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "run", inputParams);
+    }
+    /**
+     * Invokes the appletRun method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Applets and Entry Points#API-method%3A-%2Fapplet-xxxx%2Frun">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appletRun(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "run", inputParams);
     }
 
     /**
@@ -696,6 +1026,17 @@ public class DXAPI {
     public static JsonNode appletSetProperties(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "setProperties", inputParams);
     }
+    /**
+     * Invokes the appletSetProperties method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Properties#API-method%3A-%2Fclass-xxxx%2FsetProperties">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appletSetProperties(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "setProperties", inputParams);
+    }
 
     /**
      * Invokes the appletNew method.
@@ -714,6 +1055,16 @@ public class DXAPI {
      */
     public static JsonNode appletNew(JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/applet/new", inputParams);
+    }
+    /**
+     * Invokes the appletNew method with the specified environment and input parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Applets and Entry Points#API-method%3A-%2Fapplet%2Fnew">API specification</a>.
+     *
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode appletNew(DXEnvironment env, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/applet/new", inputParams);
     }
 
     /**
@@ -737,6 +1088,17 @@ public class DXAPI {
     public static JsonNode containerClone(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "clone", inputParams);
     }
+    /**
+     * Invokes the containerClone method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Cloning#API-method%3A-%2Fclass-xxxx%2Fclone">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode containerClone(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "clone", inputParams);
+    }
 
     /**
      * Invokes the containerDescribe method.
@@ -759,6 +1121,17 @@ public class DXAPI {
     public static JsonNode containerDescribe(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "describe", inputParams);
     }
+    /**
+     * Invokes the containerDescribe method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Containers-for-Execution#API-method%3A-%2Fcontainer-xxxx%2Fdescribe">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode containerDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
+    }
 
     /**
      * Invokes the containerDestroy method.
@@ -776,6 +1149,15 @@ public class DXAPI {
      */
     public static JsonNode containerDestroy(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "destroy", inputParams);
+    }
+    /**
+     * Invokes the containerDestroy method with the specified environment and parameters.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode containerDestroy(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "destroy", inputParams);
     }
 
     /**
@@ -799,6 +1181,17 @@ public class DXAPI {
     public static JsonNode containerListFolder(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "listFolder", inputParams);
     }
+    /**
+     * Invokes the containerListFolder method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Folders-and-Deletion#API-method%3A-%2Fclass-xxxx%2FlistFolder">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode containerListFolder(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "listFolder", inputParams);
+    }
 
     /**
      * Invokes the containerMove method.
@@ -820,6 +1213,17 @@ public class DXAPI {
      */
     public static JsonNode containerMove(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "move", inputParams);
+    }
+    /**
+     * Invokes the containerMove method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Folders-and-Deletion#API-method%3A-%2Fclass-xxxx%2Fmove">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode containerMove(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "move", inputParams);
     }
 
     /**
@@ -843,6 +1247,17 @@ public class DXAPI {
     public static JsonNode containerNewFolder(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "newFolder", inputParams);
     }
+    /**
+     * Invokes the containerNewFolder method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Folders-and-Deletion#API-method%3A-%2Fclass-xxxx%2FnewFolder">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode containerNewFolder(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "newFolder", inputParams);
+    }
 
     /**
      * Invokes the containerRemoveFolder method.
@@ -864,6 +1279,17 @@ public class DXAPI {
      */
     public static JsonNode containerRemoveFolder(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "removeFolder", inputParams);
+    }
+    /**
+     * Invokes the containerRemoveFolder method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Folders-and-Deletion#API-method%3A-%2Fclass-xxxx%2FremoveFolder">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode containerRemoveFolder(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeFolder", inputParams);
     }
 
     /**
@@ -887,6 +1313,17 @@ public class DXAPI {
     public static JsonNode containerRemoveObjects(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "removeObjects", inputParams);
     }
+    /**
+     * Invokes the containerRemoveObjects method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Folders-and-Deletion#API-method%3A-%2Fclass-xxxx%2FremoveObjects">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode containerRemoveObjects(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeObjects", inputParams);
+    }
 
     /**
      * Invokes the containerRenameFolder method.
@@ -908,6 +1345,17 @@ public class DXAPI {
      */
     public static JsonNode containerRenameFolder(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "renameFolder", inputParams);
+    }
+    /**
+     * Invokes the containerRenameFolder method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Folders-and-Deletion#API-method%3A-%2Fclass-xxxx%2FrenameFolder">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode containerRenameFolder(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "renameFolder", inputParams);
     }
 
     /**
@@ -931,6 +1379,17 @@ public class DXAPI {
     public static JsonNode fileAddTags(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "addTags", inputParams);
     }
+    /**
+     * Invokes the fileAddTags method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Tags#API-method%3A-%2Fclass-xxxx%2FaddTags">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode fileAddTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTags", inputParams);
+    }
 
     /**
      * Invokes the fileAddTypes method.
@@ -952,6 +1411,17 @@ public class DXAPI {
      */
     public static JsonNode fileAddTypes(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "addTypes", inputParams);
+    }
+    /**
+     * Invokes the fileAddTypes method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Types#API-method%3A-%2Fclass-xxxx%2FaddTypes">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode fileAddTypes(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTypes", inputParams);
     }
 
     /**
@@ -975,6 +1445,17 @@ public class DXAPI {
     public static JsonNode fileClose(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "close", inputParams);
     }
+    /**
+     * Invokes the fileClose method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Files#API-method%3A-%2Ffile-xxxx%2Fclose">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode fileClose(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "close", inputParams);
+    }
 
     /**
      * Invokes the fileDescribe method.
@@ -996,6 +1477,17 @@ public class DXAPI {
      */
     public static JsonNode fileDescribe(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "describe", inputParams);
+    }
+    /**
+     * Invokes the fileDescribe method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Files#API-method%3A-%2Ffile-xxxx%2Fdescribe">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode fileDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
     }
 
     /**
@@ -1019,6 +1511,17 @@ public class DXAPI {
     public static JsonNode fileDownload(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "download", inputParams);
     }
+    /**
+     * Invokes the fileDownload method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Files#API-method%3A-%2Ffile-xxxx%2Fdownload">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode fileDownload(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "download", inputParams);
+    }
 
     /**
      * Invokes the fileGetDetails method.
@@ -1040,6 +1543,17 @@ public class DXAPI {
      */
     public static JsonNode fileGetDetails(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "getDetails", inputParams);
+    }
+    /**
+     * Invokes the fileGetDetails method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Details-and-Links#API-method%3A-%2Fclass-xxxx%2FgetDetails">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode fileGetDetails(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "getDetails", inputParams);
     }
 
     /**
@@ -1063,6 +1577,17 @@ public class DXAPI {
     public static JsonNode fileListProjects(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "listProjects", inputParams);
     }
+    /**
+     * Invokes the fileListProjects method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Cloning#API-method%3A-%2Fclass-xxxx%2FlistProjects">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode fileListProjects(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "listProjects", inputParams);
+    }
 
     /**
      * Invokes the fileRemoveTags method.
@@ -1084,6 +1609,17 @@ public class DXAPI {
      */
     public static JsonNode fileRemoveTags(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "removeTags", inputParams);
+    }
+    /**
+     * Invokes the fileRemoveTags method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Tags#API-method%3A-%2Fclass-xxxx%2FremoveTags">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode fileRemoveTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTags", inputParams);
     }
 
     /**
@@ -1107,6 +1643,17 @@ public class DXAPI {
     public static JsonNode fileRemoveTypes(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "removeTypes", inputParams);
     }
+    /**
+     * Invokes the fileRemoveTypes method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Types#API-method%3A-%2Fclass-xxxx%2FremoveTypes">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode fileRemoveTypes(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTypes", inputParams);
+    }
 
     /**
      * Invokes the fileRename method.
@@ -1128,6 +1675,17 @@ public class DXAPI {
      */
     public static JsonNode fileRename(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "rename", inputParams);
+    }
+    /**
+     * Invokes the fileRename method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Name#API-method%3A-%2Fclass-xxxx%2Frename">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode fileRename(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "rename", inputParams);
     }
 
     /**
@@ -1151,6 +1709,17 @@ public class DXAPI {
     public static JsonNode fileSetDetails(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "setDetails", inputParams);
     }
+    /**
+     * Invokes the fileSetDetails method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Details-and-Links#API-method%3A-%2Fclass-xxxx%2FsetDetails">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode fileSetDetails(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "setDetails", inputParams);
+    }
 
     /**
      * Invokes the fileSetProperties method.
@@ -1172,6 +1741,17 @@ public class DXAPI {
      */
     public static JsonNode fileSetProperties(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "setProperties", inputParams);
+    }
+    /**
+     * Invokes the fileSetProperties method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Properties#API-method%3A-%2Fclass-xxxx%2FsetProperties">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode fileSetProperties(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "setProperties", inputParams);
     }
 
     /**
@@ -1195,6 +1775,17 @@ public class DXAPI {
     public static JsonNode fileSetVisibility(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "setVisibility", inputParams);
     }
+    /**
+     * Invokes the fileSetVisibility method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Visibility#API-method%3A-%2Fclass-xxxx%2FsetVisibility">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode fileSetVisibility(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "setVisibility", inputParams);
+    }
 
     /**
      * Invokes the fileUpload method.
@@ -1217,6 +1808,17 @@ public class DXAPI {
     public static JsonNode fileUpload(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "upload", inputParams);
     }
+    /**
+     * Invokes the fileUpload method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Files#API-method%3A-%2Ffile-xxxx%2Fupload">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode fileUpload(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "upload", inputParams);
+    }
 
     /**
      * Invokes the fileNew method.
@@ -1235,6 +1837,16 @@ public class DXAPI {
      */
     public static JsonNode fileNew(JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/file/new", inputParams);
+    }
+    /**
+     * Invokes the fileNew method with the specified environment and input parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Files#API-method%3A-%2Ffile%2Fnew">API specification</a>.
+     *
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode fileNew(DXEnvironment env, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/file/new", inputParams);
     }
 
     /**
@@ -1258,6 +1870,17 @@ public class DXAPI {
     public static JsonNode gtableAddRows(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "addRows", inputParams);
     }
+    /**
+     * Invokes the gtableAddRows method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/GenomicTables#API-method%3A-%2Fgtable-xxxx%2FaddRows">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode gtableAddRows(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "addRows", inputParams);
+    }
 
     /**
      * Invokes the gtableAddTags method.
@@ -1279,6 +1902,17 @@ public class DXAPI {
      */
     public static JsonNode gtableAddTags(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "addTags", inputParams);
+    }
+    /**
+     * Invokes the gtableAddTags method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Tags#API-method%3A-%2Fclass-xxxx%2FaddTags">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode gtableAddTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTags", inputParams);
     }
 
     /**
@@ -1302,6 +1936,17 @@ public class DXAPI {
     public static JsonNode gtableAddTypes(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "addTypes", inputParams);
     }
+    /**
+     * Invokes the gtableAddTypes method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Types#API-method%3A-%2Fclass-xxxx%2FaddTypes">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode gtableAddTypes(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTypes", inputParams);
+    }
 
     /**
      * Invokes the gtableClose method.
@@ -1323,6 +1968,17 @@ public class DXAPI {
      */
     public static JsonNode gtableClose(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "close", inputParams);
+    }
+    /**
+     * Invokes the gtableClose method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/GenomicTables#API-method%3A-%2Fgtable-xxxx%2Fclose">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode gtableClose(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "close", inputParams);
     }
 
     /**
@@ -1346,6 +2002,17 @@ public class DXAPI {
     public static JsonNode gtableDescribe(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "describe", inputParams);
     }
+    /**
+     * Invokes the gtableDescribe method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/GenomicTables#API-method%3A-%2Fgtable-xxxx%2Fdescribe">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode gtableDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
+    }
 
     /**
      * Invokes the gtableGet method.
@@ -1367,6 +2034,17 @@ public class DXAPI {
      */
     public static JsonNode gtableGet(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "get", inputParams);
+    }
+    /**
+     * Invokes the gtableGet method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/GenomicTables#API-method%3A-%2Fgtable-xxxx%2Fget">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode gtableGet(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "get", inputParams);
     }
 
     /**
@@ -1390,6 +2068,17 @@ public class DXAPI {
     public static JsonNode gtableGetDetails(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "getDetails", inputParams);
     }
+    /**
+     * Invokes the gtableGetDetails method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Details-and-Links#API-method%3A-%2Fclass-xxxx%2FgetDetails">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode gtableGetDetails(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "getDetails", inputParams);
+    }
 
     /**
      * Invokes the gtableListProjects method.
@@ -1411,6 +2100,17 @@ public class DXAPI {
      */
     public static JsonNode gtableListProjects(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "listProjects", inputParams);
+    }
+    /**
+     * Invokes the gtableListProjects method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Cloning#API-method%3A-%2Fclass-xxxx%2FlistProjects">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode gtableListProjects(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "listProjects", inputParams);
     }
 
     /**
@@ -1434,6 +2134,17 @@ public class DXAPI {
     public static JsonNode gtableNextPart(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "nextPart", inputParams);
     }
+    /**
+     * Invokes the gtableNextPart method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/GenomicTables#API-method%3A-%2Fgtable-xxxx%2FnextPart">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode gtableNextPart(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "nextPart", inputParams);
+    }
 
     /**
      * Invokes the gtableRemoveTags method.
@@ -1455,6 +2166,17 @@ public class DXAPI {
      */
     public static JsonNode gtableRemoveTags(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "removeTags", inputParams);
+    }
+    /**
+     * Invokes the gtableRemoveTags method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Tags#API-method%3A-%2Fclass-xxxx%2FremoveTags">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode gtableRemoveTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTags", inputParams);
     }
 
     /**
@@ -1478,6 +2200,17 @@ public class DXAPI {
     public static JsonNode gtableRemoveTypes(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "removeTypes", inputParams);
     }
+    /**
+     * Invokes the gtableRemoveTypes method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Types#API-method%3A-%2Fclass-xxxx%2FremoveTypes">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode gtableRemoveTypes(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTypes", inputParams);
+    }
 
     /**
      * Invokes the gtableRename method.
@@ -1499,6 +2232,17 @@ public class DXAPI {
      */
     public static JsonNode gtableRename(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "rename", inputParams);
+    }
+    /**
+     * Invokes the gtableRename method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Name#API-method%3A-%2Fclass-xxxx%2Frename">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode gtableRename(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "rename", inputParams);
     }
 
     /**
@@ -1522,6 +2266,17 @@ public class DXAPI {
     public static JsonNode gtableSetDetails(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "setDetails", inputParams);
     }
+    /**
+     * Invokes the gtableSetDetails method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Details-and-Links#API-method%3A-%2Fclass-xxxx%2FsetDetails">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode gtableSetDetails(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "setDetails", inputParams);
+    }
 
     /**
      * Invokes the gtableSetProperties method.
@@ -1543,6 +2298,17 @@ public class DXAPI {
      */
     public static JsonNode gtableSetProperties(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "setProperties", inputParams);
+    }
+    /**
+     * Invokes the gtableSetProperties method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Properties#API-method%3A-%2Fclass-xxxx%2FsetProperties">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode gtableSetProperties(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "setProperties", inputParams);
     }
 
     /**
@@ -1566,6 +2332,17 @@ public class DXAPI {
     public static JsonNode gtableSetVisibility(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "setVisibility", inputParams);
     }
+    /**
+     * Invokes the gtableSetVisibility method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Visibility#API-method%3A-%2Fclass-xxxx%2FsetVisibility">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode gtableSetVisibility(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "setVisibility", inputParams);
+    }
 
     /**
      * Invokes the gtableNew method.
@@ -1584,6 +2361,16 @@ public class DXAPI {
      */
     public static JsonNode gtableNew(JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/gtable/new", inputParams);
+    }
+    /**
+     * Invokes the gtableNew method with the specified environment and input parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/GenomicTables#API-method%3A-%2Fgtable%2Fnew">API specification</a>.
+     *
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode gtableNew(DXEnvironment env, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/gtable/new", inputParams);
     }
 
     /**
@@ -1607,6 +2394,17 @@ public class DXAPI {
     public static JsonNode jobDescribe(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "describe", inputParams);
     }
+    /**
+     * Invokes the jobDescribe method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Applets and Entry Points#API-method%3A-%2Fjob-xxxx%2Fdescribe">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode jobDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
+    }
 
     /**
      * Invokes the jobStreamLog method.
@@ -1628,6 +2426,17 @@ public class DXAPI {
      */
     public static JsonNode jobStreamLog(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "streamLog", inputParams);
+    }
+    /**
+     * Invokes the jobStreamLog method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Applets and Entry Points#API-method%3A-%2Fjob-xxxx%2FstreamLog">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode jobStreamLog(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "streamLog", inputParams);
     }
 
     /**
@@ -1651,6 +2460,17 @@ public class DXAPI {
     public static JsonNode jobTerminate(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "terminate", inputParams);
     }
+    /**
+     * Invokes the jobTerminate method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Applets and Entry Points#API-method%3A-%2Fjob-xxxx%2Fterminate">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode jobTerminate(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "terminate", inputParams);
+    }
 
     /**
      * Invokes the jobNew method.
@@ -1670,6 +2490,16 @@ public class DXAPI {
     public static JsonNode jobNew(JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/job/new", inputParams);
     }
+    /**
+     * Invokes the jobNew method with the specified environment and input parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Applets and Entry Points#API-method%3A-%2Fjob%2Fnew">API specification</a>.
+     *
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode jobNew(DXEnvironment env, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/job/new", inputParams);
+    }
 
     /**
      * Invokes the notificationsGet method.
@@ -1685,6 +2515,14 @@ public class DXAPI {
     public static JsonNode notificationsGet(JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/notifications/get", inputParams);
     }
+    /**
+     * Invokes the notificationsGet method with the specified environment and input parameters.
+     *
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode notificationsGet(DXEnvironment env, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/notifications/get", inputParams);
+    }
 
     /**
      * Invokes the notificationsMarkRead method.
@@ -1699,6 +2537,14 @@ public class DXAPI {
      */
     public static JsonNode notificationsMarkRead(JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/notifications/markRead", inputParams);
+    }
+    /**
+     * Invokes the notificationsMarkRead method with the specified environment and input parameters.
+     *
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode notificationsMarkRead(DXEnvironment env, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/notifications/markRead", inputParams);
     }
 
     /**
@@ -1722,6 +2568,17 @@ public class DXAPI {
     public static JsonNode projectAddTags(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "addTags", inputParams);
     }
+    /**
+     * Invokes the projectAddTags method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Projects#API-method%3A-%2Fproject-xxxx%2FaddTags">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode projectAddTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTags", inputParams);
+    }
 
     /**
      * Invokes the projectClone method.
@@ -1743,6 +2600,17 @@ public class DXAPI {
      */
     public static JsonNode projectClone(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "clone", inputParams);
+    }
+    /**
+     * Invokes the projectClone method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Cloning#API-method%3A-%2Fclass-xxxx%2Fclone">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode projectClone(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "clone", inputParams);
     }
 
     /**
@@ -1766,6 +2634,17 @@ public class DXAPI {
     public static JsonNode projectDecreasePermissions(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "decreasePermissions", inputParams);
     }
+    /**
+     * Invokes the projectDecreasePermissions method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Projects#API-method%3A-%2Fproject-xxxx%2FdecreasePermissions">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode projectDecreasePermissions(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "decreasePermissions", inputParams);
+    }
 
     /**
      * Invokes the projectDescribe method.
@@ -1787,6 +2666,17 @@ public class DXAPI {
      */
     public static JsonNode projectDescribe(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "describe", inputParams);
+    }
+    /**
+     * Invokes the projectDescribe method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Projects#API-method%3A-%2Fproject-xxxx%2Fdescribe">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode projectDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
     }
 
     /**
@@ -1810,6 +2700,17 @@ public class DXAPI {
     public static JsonNode projectDestroy(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "destroy", inputParams);
     }
+    /**
+     * Invokes the projectDestroy method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Projects#API-method%3A-%2Fproject-xxxx%2Fdestroy">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode projectDestroy(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "destroy", inputParams);
+    }
 
     /**
      * Invokes the projectInvite method.
@@ -1831,6 +2732,17 @@ public class DXAPI {
      */
     public static JsonNode projectInvite(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "invite", inputParams);
+    }
+    /**
+     * Invokes the projectInvite method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Invitations and Join Requests#API-method%3A-%2Fproject-xxxx%2Finvite">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode projectInvite(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "invite", inputParams);
     }
 
     /**
@@ -1854,6 +2766,17 @@ public class DXAPI {
     public static JsonNode projectLeave(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "leave", inputParams);
     }
+    /**
+     * Invokes the projectLeave method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Projects#API-method%3A-%2Fproject-xxxx%2Fleave">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode projectLeave(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "leave", inputParams);
+    }
 
     /**
      * Invokes the projectListFolder method.
@@ -1875,6 +2798,17 @@ public class DXAPI {
      */
     public static JsonNode projectListFolder(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "listFolder", inputParams);
+    }
+    /**
+     * Invokes the projectListFolder method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Folders-and-Deletion#API-method%3A-%2Fclass-xxxx%2FlistFolder">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode projectListFolder(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "listFolder", inputParams);
     }
 
     /**
@@ -1898,6 +2832,17 @@ public class DXAPI {
     public static JsonNode projectMove(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "move", inputParams);
     }
+    /**
+     * Invokes the projectMove method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Folders-and-Deletion#API-method%3A-%2Fclass-xxxx%2Fmove">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode projectMove(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "move", inputParams);
+    }
 
     /**
      * Invokes the projectNewFolder method.
@@ -1919,6 +2864,17 @@ public class DXAPI {
      */
     public static JsonNode projectNewFolder(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "newFolder", inputParams);
+    }
+    /**
+     * Invokes the projectNewFolder method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Folders-and-Deletion#API-method%3A-%2Fclass-xxxx%2FnewFolder">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode projectNewFolder(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "newFolder", inputParams);
     }
 
     /**
@@ -1942,6 +2898,17 @@ public class DXAPI {
     public static JsonNode projectRemoveFolder(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "removeFolder", inputParams);
     }
+    /**
+     * Invokes the projectRemoveFolder method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Folders-and-Deletion#API-method%3A-%2Fclass-xxxx%2FremoveFolder">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode projectRemoveFolder(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeFolder", inputParams);
+    }
 
     /**
      * Invokes the projectRemoveObjects method.
@@ -1963,6 +2930,17 @@ public class DXAPI {
      */
     public static JsonNode projectRemoveObjects(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "removeObjects", inputParams);
+    }
+    /**
+     * Invokes the projectRemoveObjects method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Folders-and-Deletion#API-method%3A-%2Fclass-xxxx%2FremoveObjects">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode projectRemoveObjects(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeObjects", inputParams);
     }
 
     /**
@@ -1986,6 +2964,17 @@ public class DXAPI {
     public static JsonNode projectRemoveTags(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "removeTags", inputParams);
     }
+    /**
+     * Invokes the projectRemoveTags method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Projects#API-method%3A-%2Fproject-xxxx%2FremoveTags">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode projectRemoveTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTags", inputParams);
+    }
 
     /**
      * Invokes the projectRenameFolder method.
@@ -2007,6 +2996,17 @@ public class DXAPI {
      */
     public static JsonNode projectRenameFolder(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "renameFolder", inputParams);
+    }
+    /**
+     * Invokes the projectRenameFolder method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Folders-and-Deletion#API-method%3A-%2Fclass-xxxx%2FrenameFolder">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode projectRenameFolder(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "renameFolder", inputParams);
     }
 
     /**
@@ -2030,6 +3030,17 @@ public class DXAPI {
     public static JsonNode projectSetProperties(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "setProperties", inputParams);
     }
+    /**
+     * Invokes the projectSetProperties method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Projects#API-method%3A-%2Fproject-xxxx%2FsetProperties">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode projectSetProperties(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "setProperties", inputParams);
+    }
 
     /**
      * Invokes the projectUpdate method.
@@ -2052,6 +3063,17 @@ public class DXAPI {
     public static JsonNode projectUpdate(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "update", inputParams);
     }
+    /**
+     * Invokes the projectUpdate method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Projects#API-method%3A-%2Fproject-xxxx%2Fupdate">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode projectUpdate(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "update", inputParams);
+    }
 
     /**
      * Invokes the projectNew method.
@@ -2070,6 +3092,16 @@ public class DXAPI {
      */
     public static JsonNode projectNew(JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/project/new", inputParams);
+    }
+    /**
+     * Invokes the projectNew method with the specified environment and input parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Projects#API-method%3A-%2Fproject%2Fnew">API specification</a>.
+     *
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode projectNew(DXEnvironment env, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/project/new", inputParams);
     }
 
     /**
@@ -2093,6 +3125,17 @@ public class DXAPI {
     public static JsonNode recordAddTags(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "addTags", inputParams);
     }
+    /**
+     * Invokes the recordAddTags method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Tags#API-method%3A-%2Fclass-xxxx%2FaddTags">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode recordAddTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTags", inputParams);
+    }
 
     /**
      * Invokes the recordAddTypes method.
@@ -2114,6 +3157,17 @@ public class DXAPI {
      */
     public static JsonNode recordAddTypes(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "addTypes", inputParams);
+    }
+    /**
+     * Invokes the recordAddTypes method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Types#API-method%3A-%2Fclass-xxxx%2FaddTypes">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode recordAddTypes(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTypes", inputParams);
     }
 
     /**
@@ -2137,6 +3191,17 @@ public class DXAPI {
     public static JsonNode recordClose(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "close", inputParams);
     }
+    /**
+     * Invokes the recordClose method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Data Object-Lifecycle#API-method%3A-%2Fclass-xxxx%2Fclose">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode recordClose(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "close", inputParams);
+    }
 
     /**
      * Invokes the recordDescribe method.
@@ -2158,6 +3223,17 @@ public class DXAPI {
      */
     public static JsonNode recordDescribe(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "describe", inputParams);
+    }
+    /**
+     * Invokes the recordDescribe method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Records#API-method%3A-%2Frecord-xxxx%2Fdescribe">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode recordDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
     }
 
     /**
@@ -2181,6 +3257,17 @@ public class DXAPI {
     public static JsonNode recordGetDetails(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "getDetails", inputParams);
     }
+    /**
+     * Invokes the recordGetDetails method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Details-and-Links#API-method%3A-%2Fclass-xxxx%2FgetDetails">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode recordGetDetails(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "getDetails", inputParams);
+    }
 
     /**
      * Invokes the recordListProjects method.
@@ -2202,6 +3289,17 @@ public class DXAPI {
      */
     public static JsonNode recordListProjects(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "listProjects", inputParams);
+    }
+    /**
+     * Invokes the recordListProjects method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Cloning#API-method%3A-%2Fclass-xxxx%2FlistProjects">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode recordListProjects(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "listProjects", inputParams);
     }
 
     /**
@@ -2225,6 +3323,17 @@ public class DXAPI {
     public static JsonNode recordRemoveTags(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "removeTags", inputParams);
     }
+    /**
+     * Invokes the recordRemoveTags method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Tags#API-method%3A-%2Fclass-xxxx%2FremoveTags">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode recordRemoveTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTags", inputParams);
+    }
 
     /**
      * Invokes the recordRemoveTypes method.
@@ -2246,6 +3355,17 @@ public class DXAPI {
      */
     public static JsonNode recordRemoveTypes(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "removeTypes", inputParams);
+    }
+    /**
+     * Invokes the recordRemoveTypes method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Types#API-method%3A-%2Fclass-xxxx%2FremoveTypes">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode recordRemoveTypes(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTypes", inputParams);
     }
 
     /**
@@ -2269,6 +3389,17 @@ public class DXAPI {
     public static JsonNode recordRename(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "rename", inputParams);
     }
+    /**
+     * Invokes the recordRename method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Name#API-method%3A-%2Fclass-xxxx%2Frename">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode recordRename(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "rename", inputParams);
+    }
 
     /**
      * Invokes the recordSetDetails method.
@@ -2290,6 +3421,17 @@ public class DXAPI {
      */
     public static JsonNode recordSetDetails(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "setDetails", inputParams);
+    }
+    /**
+     * Invokes the recordSetDetails method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Details-and-Links#API-method%3A-%2Fclass-xxxx%2FsetDetails">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode recordSetDetails(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "setDetails", inputParams);
     }
 
     /**
@@ -2313,6 +3455,17 @@ public class DXAPI {
     public static JsonNode recordSetProperties(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "setProperties", inputParams);
     }
+    /**
+     * Invokes the recordSetProperties method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Properties#API-method%3A-%2Fclass-xxxx%2FsetProperties">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode recordSetProperties(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "setProperties", inputParams);
+    }
 
     /**
      * Invokes the recordSetVisibility method.
@@ -2335,6 +3488,17 @@ public class DXAPI {
     public static JsonNode recordSetVisibility(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "setVisibility", inputParams);
     }
+    /**
+     * Invokes the recordSetVisibility method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Visibility#API-method%3A-%2Fclass-xxxx%2FsetVisibility">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode recordSetVisibility(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "setVisibility", inputParams);
+    }
 
     /**
      * Invokes the recordNew method.
@@ -2354,6 +3518,16 @@ public class DXAPI {
     public static JsonNode recordNew(JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/record/new", inputParams);
     }
+    /**
+     * Invokes the recordNew method with the specified environment and input parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Records#API-method%3A-%2Frecord%2Fnew">API specification</a>.
+     *
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode recordNew(DXEnvironment env, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/record/new", inputParams);
+    }
 
     /**
      * Invokes the systemFindAffiliates method.
@@ -2368,6 +3542,14 @@ public class DXAPI {
      */
     public static JsonNode systemFindAffiliates(JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/system/findAffiliates", inputParams);
+    }
+    /**
+     * Invokes the systemFindAffiliates method with the specified environment and input parameters.
+     *
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode systemFindAffiliates(DXEnvironment env, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/system/findAffiliates", inputParams);
     }
 
     /**
@@ -2388,6 +3570,16 @@ public class DXAPI {
     public static JsonNode systemFindApps(JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/system/findApps", inputParams);
     }
+    /**
+     * Invokes the systemFindApps method with the specified environment and input parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Search#API-method%3A-%2Fsystem%2FfindApps">API specification</a>.
+     *
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode systemFindApps(DXEnvironment env, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/system/findApps", inputParams);
+    }
 
     /**
      * Invokes the systemFindDataObjects method.
@@ -2406,6 +3598,16 @@ public class DXAPI {
      */
     public static JsonNode systemFindDataObjects(JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/system/findDataObjects", inputParams);
+    }
+    /**
+     * Invokes the systemFindDataObjects method with the specified environment and input parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Search#API-method%3A-%2Fsystem%2FfindDataObjects">API specification</a>.
+     *
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode systemFindDataObjects(DXEnvironment env, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/system/findDataObjects", inputParams);
     }
 
     /**
@@ -2426,6 +3628,16 @@ public class DXAPI {
     public static JsonNode systemFindJobs(JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/system/findJobs", inputParams);
     }
+    /**
+     * Invokes the systemFindJobs method with the specified environment and input parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Search#API-method%3A-%2Fsystem%2FfindJobs">API specification</a>.
+     *
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode systemFindJobs(DXEnvironment env, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/system/findJobs", inputParams);
+    }
 
     /**
      * Invokes the systemFindProjects method.
@@ -2444,6 +3656,16 @@ public class DXAPI {
      */
     public static JsonNode systemFindProjects(JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/system/findProjects", inputParams);
+    }
+    /**
+     * Invokes the systemFindProjects method with the specified environment and input parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Search#API-method%3A-%2Fsystem%2FfindProjects">API specification</a>.
+     *
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode systemFindProjects(DXEnvironment env, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/system/findProjects", inputParams);
     }
 
     /**
@@ -2464,6 +3686,16 @@ public class DXAPI {
     public static JsonNode systemFindUsers(JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/system/findUsers", inputParams);
     }
+    /**
+     * Invokes the systemFindUsers method with the specified environment and input parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Search#API-method%3A-%2Fsystem%2FfindUsers">API specification</a>.
+     *
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode systemFindUsers(DXEnvironment env, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/system/findUsers", inputParams);
+    }
 
     /**
      * Invokes the systemFindProjectMembers method.
@@ -2483,6 +3715,16 @@ public class DXAPI {
     public static JsonNode systemFindProjectMembers(JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/system/findProjectMembers", inputParams);
     }
+    /**
+     * Invokes the systemFindProjectMembers method with the specified environment and input parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Search#API-method:-/system/findProjectMembers">API specification</a>.
+     *
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode systemFindProjectMembers(DXEnvironment env, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/system/findProjectMembers", inputParams);
+    }
 
     /**
      * Invokes the systemGreet method.
@@ -2498,6 +3740,14 @@ public class DXAPI {
     public static JsonNode systemGreet(JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/system/greet", inputParams);
     }
+    /**
+     * Invokes the systemGreet method with the specified environment and input parameters.
+     *
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode systemGreet(DXEnvironment env, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/system/greet", inputParams);
+    }
 
     /**
      * Invokes the systemShortenURL method.
@@ -2512,6 +3762,14 @@ public class DXAPI {
      */
     public static JsonNode systemShortenURL(JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/system/shortenURL", inputParams);
+    }
+    /**
+     * Invokes the systemShortenURL method with the specified environment and input parameters.
+     *
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode systemShortenURL(DXEnvironment env, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/system/shortenURL", inputParams);
     }
 
     /**
@@ -2535,6 +3793,17 @@ public class DXAPI {
     public static JsonNode userDescribe(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "describe", inputParams);
     }
+    /**
+     * Invokes the userDescribe method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Users#API-method%3A-%2Fuser-xxxx%2Fdescribe">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode userDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
+    }
 
     /**
      * Invokes the userUpdate method.
@@ -2556,6 +3825,17 @@ public class DXAPI {
      */
     public static JsonNode userUpdate(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "update", inputParams);
+    }
+    /**
+     * Invokes the userUpdate method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Users#API-method%3A-%2Fuser-xxxx%2Fupdate">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode userUpdate(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "update", inputParams);
     }
 
     /**
@@ -2579,6 +3859,17 @@ public class DXAPI {
     public static JsonNode workflowAddStage(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "addStage", inputParams);
     }
+    /**
+     * Invokes the workflowAddStage method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Workflows-and-Analyses#API-method%3A-%2Fworkflow-xxxx%2FaddStage">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode workflowAddStage(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "addStage", inputParams);
+    }
 
     /**
      * Invokes the workflowAddTags method.
@@ -2600,6 +3891,17 @@ public class DXAPI {
      */
     public static JsonNode workflowAddTags(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "addTags", inputParams);
+    }
+    /**
+     * Invokes the workflowAddTags method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Tags#API-method%3A-%2Fclass-xxxx%2FaddTags">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode workflowAddTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTags", inputParams);
     }
 
     /**
@@ -2623,6 +3925,17 @@ public class DXAPI {
     public static JsonNode workflowAddTypes(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "addTypes", inputParams);
     }
+    /**
+     * Invokes the workflowAddTypes method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Types#API-method%3A-%2Fclass-xxxx%2FaddTypes">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode workflowAddTypes(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "addTypes", inputParams);
+    }
 
     /**
      * Invokes the workflowClose method.
@@ -2644,6 +3957,17 @@ public class DXAPI {
      */
     public static JsonNode workflowClose(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "close", inputParams);
+    }
+    /**
+     * Invokes the workflowClose method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Data Object-Lifecycle#API-method%3A-%2Fclass-xxxx%2Fclose">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode workflowClose(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "close", inputParams);
     }
 
     /**
@@ -2667,6 +3991,17 @@ public class DXAPI {
     public static JsonNode workflowDescribe(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "describe", inputParams);
     }
+    /**
+     * Invokes the workflowDescribe method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Workflows-and-Analyses#API-method%3A-%2Fworkflow-xxxx%2Fdescribe">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode workflowDescribe(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "describe", inputParams);
+    }
 
     /**
      * Invokes the workflowGetDetails method.
@@ -2688,6 +4023,17 @@ public class DXAPI {
      */
     public static JsonNode workflowGetDetails(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "getDetails", inputParams);
+    }
+    /**
+     * Invokes the workflowGetDetails method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Details-and-Links#API-method%3A-%2Fclass-xxxx%2FgetDetails">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode workflowGetDetails(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "getDetails", inputParams);
     }
 
     /**
@@ -2711,6 +4057,17 @@ public class DXAPI {
     public static JsonNode workflowListProjects(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "listProjects", inputParams);
     }
+    /**
+     * Invokes the workflowListProjects method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Cloning#API-method%3A-%2Fclass-xxxx%2FlistProjects">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode workflowListProjects(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "listProjects", inputParams);
+    }
 
     /**
      * Invokes the workflowMoveStage method.
@@ -2732,6 +4089,17 @@ public class DXAPI {
      */
     public static JsonNode workflowMoveStage(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "moveStage", inputParams);
+    }
+    /**
+     * Invokes the workflowMoveStage method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Workflows-and-Analyses#API-method%3A-%2Fworkflow-xxxx%2FmoveStage">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode workflowMoveStage(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "moveStage", inputParams);
     }
 
     /**
@@ -2755,6 +4123,17 @@ public class DXAPI {
     public static JsonNode workflowRemoveStage(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "removeStage", inputParams);
     }
+    /**
+     * Invokes the workflowRemoveStage method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Workflows-and-Analyses#API-method%3A-%2Fworkflow-xxxx%2FremoveStage">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode workflowRemoveStage(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeStage", inputParams);
+    }
 
     /**
      * Invokes the workflowRemoveTags method.
@@ -2776,6 +4155,17 @@ public class DXAPI {
      */
     public static JsonNode workflowRemoveTags(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "removeTags", inputParams);
+    }
+    /**
+     * Invokes the workflowRemoveTags method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Tags#API-method%3A-%2Fclass-xxxx%2FremoveTags">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode workflowRemoveTags(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTags", inputParams);
     }
 
     /**
@@ -2799,6 +4189,17 @@ public class DXAPI {
     public static JsonNode workflowRemoveTypes(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "removeTypes", inputParams);
     }
+    /**
+     * Invokes the workflowRemoveTypes method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Types#API-method%3A-%2Fclass-xxxx%2FremoveTypes">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode workflowRemoveTypes(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "removeTypes", inputParams);
+    }
 
     /**
      * Invokes the workflowRename method.
@@ -2820,6 +4221,17 @@ public class DXAPI {
      */
     public static JsonNode workflowRename(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "rename", inputParams);
+    }
+    /**
+     * Invokes the workflowRename method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Name#API-method%3A-%2Fclass-xxxx%2Frename">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode workflowRename(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "rename", inputParams);
     }
 
     /**
@@ -2843,6 +4255,17 @@ public class DXAPI {
     public static JsonNode workflowRun(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "run", inputParams);
     }
+    /**
+     * Invokes the workflowRun method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Workflows-and-Analyses#API-method%3A-%2Fworkflow-xxxx%2FremoveStage">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode workflowRun(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "run", inputParams);
+    }
 
     /**
      * Invokes the workflowSetDetails method.
@@ -2864,6 +4287,17 @@ public class DXAPI {
      */
     public static JsonNode workflowSetDetails(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "setDetails", inputParams);
+    }
+    /**
+     * Invokes the workflowSetDetails method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Details-and-Links#API-method%3A-%2Fclass-xxxx%2FsetDetails">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode workflowSetDetails(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "setDetails", inputParams);
     }
 
     /**
@@ -2887,6 +4321,17 @@ public class DXAPI {
     public static JsonNode workflowSetProperties(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "setProperties", inputParams);
     }
+    /**
+     * Invokes the workflowSetProperties method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Properties#API-method%3A-%2Fclass-xxxx%2FsetProperties">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode workflowSetProperties(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "setProperties", inputParams);
+    }
 
     /**
      * Invokes the workflowSetStageInputs method.
@@ -2908,6 +4353,17 @@ public class DXAPI {
      */
     public static JsonNode workflowSetStageInputs(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "setStageInputs", inputParams);
+    }
+    /**
+     * Invokes the workflowSetStageInputs method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Workflows-and-Analyses#API-method%3A-%2Fworkflow-xxxx%2FsetStageInputs">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode workflowSetStageInputs(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "setStageInputs", inputParams);
     }
 
     /**
@@ -2931,6 +4387,17 @@ public class DXAPI {
     public static JsonNode workflowSetVisibility(String objectId, JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/" + objectId + "/" + "setVisibility", inputParams);
     }
+    /**
+     * Invokes the workflowSetVisibility method with the specified environment and parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Visibility#API-method%3A-%2Fclass-xxxx%2FsetVisibility">API specification</a>.
+     *
+     * @param objectId ID of the object to operate on
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode workflowSetVisibility(DXEnvironment env, String objectId, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/" + objectId + "/" + "setVisibility", inputParams);
+    }
 
     /**
      * Invokes the workflowNew method.
@@ -2949,6 +4416,16 @@ public class DXAPI {
      */
     public static JsonNode workflowNew(JsonNode inputParams) throws Exception {
         return new DXHTTPRequest().request("/workflow/new", inputParams);
+    }
+    /**
+     * Invokes the workflowNew method with the specified environment and input parameters.
+     *
+     * <p>For more information about this method, see the <a href="https://wiki.dnanexus.com/API-Specification-v1.0.0/Workflows-and-Analyses#API-method%3A-%2Fworkflow%2Fnew">API specification</a>.
+     *
+     * @param inputParams input parameters to the API call
+     */
+    public static JsonNode workflowNew(DXEnvironment env, JsonNode inputParams) throws Exception {
+        return new DXHTTPRequest(env).request("/workflow/new", inputParams);
     }
 }
 
