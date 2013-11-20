@@ -31,6 +31,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
+/**
+ * Tests DXSearch methods.
+ */
 public class DXSearchTest {
 
     private static final ObjectMapper mapper = new ObjectMapper();
@@ -51,12 +54,20 @@ public class DXSearchTest {
 
     // External tests
 
+    /**
+     * findDataObjects smoke test.
+     */
     @Test
-    public void testFindDataObjects() {
-        Assert.assertEquals(0, DXSearch.findDataObjects().nameMatchesExactly("foobarbaz").execute()
-                .asList().size());
+    public void testFindDataObjectsSimple() {
+        Assert.assertEquals(0, DXSearch.findDataObjects().inProject(testProject)
+                .nameMatchesExactly("foobarbaz").execute().asList().size());
+    }
 
-        // Test paging through results
+    /**
+     * Tests paging through results.
+     */
+    @Test
+    public void testFindDataObjectsWithPaging() {
         List<DXRecord> records = Lists.newArrayList();
         Set<String> recordIds = Sets.newHashSet();
         for (int i = 0; i < 8; ++i) {
