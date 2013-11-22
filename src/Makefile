@@ -284,7 +284,7 @@ doc_ruby: ruby
 
 # Upload Agent dependencies
 # =========================
-ua_deps: openssl boost curl libmagic
+ua_deps: openssl boost curl file/stage/lib/libmagic.la
 
 UBUNTU_MIRROR=http://archive.ubuntu.com/ubuntu
 
@@ -348,12 +348,14 @@ else
 	cd boost; ./b2 --layout=tagged -j8 stage
 endif
 
-curl: c-ares curl/stage/lib/libcurl.la
+curl: c-ares/stage/lib/libcares.la curl/stage/lib/libcurl.la
 
 CURL_PV=7.32.0
 CURL_SHA=cadc5648e4cd4ea750a8c580311722ed1fb1573a
 ifeq ($(OS), Windows_NT)
-	CURL_WITH_WINSSL=--with-winssl
+	CURL_WITH_SSL=--with-winssl
+else
+	CURL_WITH_SSL=--with-ssl=openssl
 endif
 curl/stage/lib/libcurl.la: shasum
 	mkdir -p curl
@@ -366,10 +368,7 @@ curl/stage/lib/libcurl.la: shasum
 	    --disable-tls-srp --without-gnutls --without-polarssl --without-cyassl \
 	    --without-nss --without-libmetalink --without-libssh2 --without-librtmp \
 	    --without-winidn --without-libidn --enable-ares="$(DNANEXUS_HOME)/src/c-ares/stage" \
-	    --enable-static=yes $(CURL_WITH_WINSSL) --prefix=/
-	$(MAKE) -C curl install DESTDIR="$(DNANEXUS_HOME)/src/curl/stage"
-
-c-ares: c-ares/stage/lib/libcares.la
+	    --enable-static=yes $(CURL_WITH_SSL) --prefix=/
 
 CARES_PV=1.10.0
 CARES_SHA=e44e6575d5af99cb3a38461486e1ee8b49810eb5
@@ -380,8 +379,6 @@ c-ares/stage/lib/libcares.la: shasum
 	tar -xzf c-ares-${CARES_PV}.tar.gz -C c-ares --strip-components=1
 	cd c-ares; ./configure --prefix=/
 	$(MAKE) -C c-ares install DESTDIR="$(DNANEXUS_HOME)/src/c-ares/stage"
-
-libmagic: file/stage/lib/libmagic.la
 
 FILE_PV=5.09
 FILE_SHA=9d905f9e50033c3f5be3728473cbb709a41550fb
